@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		5D9A9F0D2A3C726000788EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F0C2A3C726000788EC0 /* AppDelegate.swift */; };
 		5D9A9F0F2A3C726000788EC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F0E2A3C726000788EC0 /* SceneDelegate.swift */; };
-		5D9A9F112A3C726000788EC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F102A3C726000788EC0 /* ViewController.swift */; };
 		5D9A9F142A3C726000788EC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A9F122A3C726000788EC0 /* Main.storyboard */; };
 		5D9A9F162A3C726100788EC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A9F152A3C726100788EC0 /* Assets.xcassets */; };
 		5D9A9F192A3C726100788EC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A9F172A3C726100788EC0 /* LaunchScreen.storyboard */; };
+		5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F252A3C734A00788EC0 /* Wizard.swift */; };
+		5D9A9F282A3C736B00788EC0 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F272A3C736B00788EC0 /* MainCollectionViewController.swift */; };
+		5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F292A3C77CE00788EC0 /* Spell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D9A9F092A3C726000788EC0 /* WizardWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizardWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9A9F0C2A3C726000788EC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D9A9F0E2A3C726000788EC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D9A9F102A3C726000788EC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D9A9F132A3C726000788EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D9A9F152A3C726100788EC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D9A9F182A3C726100788EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D9A9F1A2A3C726100788EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D9A9F252A3C734A00788EC0 /* Wizard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wizard.swift; sourceTree = "<group>"; };
+		5D9A9F272A3C736B00788EC0 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		5D9A9F292A3C77CE00788EC0 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		5D9A9F0B2A3C726000788EC0 /* WizardWorld */ = {
 			isa = PBXGroup;
 			children = (
-				5D9A9F0C2A3C726000788EC0 /* AppDelegate.swift */,
-				5D9A9F0E2A3C726000788EC0 /* SceneDelegate.swift */,
-				5D9A9F102A3C726000788EC0 /* ViewController.swift */,
-				5D9A9F122A3C726000788EC0 /* Main.storyboard */,
-				5D9A9F152A3C726100788EC0 /* Assets.xcassets */,
-				5D9A9F172A3C726100788EC0 /* LaunchScreen.storyboard */,
-				5D9A9F1A2A3C726100788EC0 /* Info.plist */,
+				5D9A9F242A3C72F800788EC0 /* Models */,
+				5D9A9F232A3C72DD00788EC0 /* ViewControllers */,
+				5D9A9F212A3C72A000788EC0 /* Storyboards */,
+				5D9A9F202A3C727C00788EC0 /* App */,
+				5D9A9F222A3C72B800788EC0 /* Resources */,
 			);
 			path = WizardWorld;
+			sourceTree = "<group>";
+		};
+		5D9A9F202A3C727C00788EC0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A9F0C2A3C726000788EC0 /* AppDelegate.swift */,
+				5D9A9F0E2A3C726000788EC0 /* SceneDelegate.swift */,
+				5D9A9F1A2A3C726100788EC0 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5D9A9F212A3C72A000788EC0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A9F122A3C726000788EC0 /* Main.storyboard */,
+				5D9A9F172A3C726100788EC0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5D9A9F222A3C72B800788EC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A9F152A3C726100788EC0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D9A9F232A3C72DD00788EC0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A9F272A3C736B00788EC0 /* MainCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D9A9F242A3C72F800788EC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A9F252A3C734A00788EC0 /* Wizard.swift */,
+				5D9A9F292A3C77CE00788EC0 /* Spell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D9A9F112A3C726000788EC0 /* ViewController.swift in Sources */,
+				5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */,
 				5D9A9F0D2A3C726000788EC0 /* AppDelegate.swift in Sources */,
+				5D9A9F282A3C736B00788EC0 /* MainCollectionViewController.swift in Sources */,
+				5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */,
 				5D9A9F0F2A3C726000788EC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U54N9MV9TR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WizardWorld/Info.plist;
+				INFOPLIST_FILE = WizardWorld/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U54N9MV9TR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WizardWorld/Info.plist;
+				INFOPLIST_FILE = WizardWorld/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
