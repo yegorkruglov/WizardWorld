@@ -15,6 +15,7 @@
 		5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F252A3C734A00788EC0 /* Wizard.swift */; };
 		5D9A9F282A3C736B00788EC0 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F272A3C736B00788EC0 /* MainCollectionViewController.swift */; };
 		5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F292A3C77CE00788EC0 /* Spell.swift */; };
+		5D9A9F2D2A3C799000788EC0 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F2C2A3C799000788EC0 /* UserActionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5D9A9F252A3C734A00788EC0 /* Wizard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wizard.swift; sourceTree = "<group>"; };
 		5D9A9F272A3C736B00788EC0 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		5D9A9F292A3C77CE00788EC0 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		5D9A9F2C2A3C799000788EC0 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		5D9A9F0B2A3C726000788EC0 /* WizardWorld */ = {
 			isa = PBXGroup;
 			children = (
+				5D9A9F2B2A3C797100788EC0 /* Views */,
 				5D9A9F242A3C72F800788EC0 /* Models */,
 				5D9A9F232A3C72DD00788EC0 /* ViewControllers */,
 				5D9A9F212A3C72A000788EC0 /* Storyboards */,
@@ -111,6 +114,14 @@
 				5D9A9F292A3C77CE00788EC0 /* Spell.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5D9A9F2B2A3C797100788EC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D9A9F2C2A3C799000788EC0 /* UserActionCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				5D9A9F0D2A3C726000788EC0 /* AppDelegate.swift in Sources */,
 				5D9A9F282A3C736B00788EC0 /* MainCollectionViewController.swift in Sources */,
 				5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */,
+				5D9A9F2D2A3C799000788EC0 /* UserActionCell.swift in Sources */,
 				5D9A9F0F2A3C726000788EC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
