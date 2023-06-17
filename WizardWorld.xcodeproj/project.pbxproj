@@ -62,9 +62,9 @@
 		5D9A9F0B2A3C726000788EC0 /* WizardWorld */ = {
 			isa = PBXGroup;
 			children = (
-				5D9A9F2B2A3C797100788EC0 /* Views */,
 				5D9A9F242A3C72F800788EC0 /* Models */,
 				5D9A9F232A3C72DD00788EC0 /* ViewControllers */,
+				5D9A9F2B2A3C797100788EC0 /* Views */,
 				5D9A9F212A3C72A000788EC0 /* Storyboards */,
 				5D9A9F202A3C727C00788EC0 /* App */,
 				5D9A9F222A3C72B800788EC0 /* Resources */,
