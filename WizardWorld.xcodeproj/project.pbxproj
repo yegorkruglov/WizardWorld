@@ -24,6 +24,7 @@
 		5DE54FBC2A4364940001E3ED /* ElixirsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */; };
 		5DE54FBE2A436C800001E3ED /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FBD2A436C800001E3ED /* StartVC.swift */; };
 		5DE54FC72A438A2B0001E3ED /* HouseDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FC62A438A2B0001E3ED /* HouseDetailsVC.swift */; };
+		5DE54FC92A43A0250001E3ED /* WizardDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FC82A43A0250001E3ED /* WizardDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixirsVC.swift; sourceTree = "<group>"; };
 		5DE54FBD2A436C800001E3ED /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		5DE54FC62A438A2B0001E3ED /* HouseDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsVC.swift; sourceTree = "<group>"; };
+		5DE54FC82A43A0250001E3ED /* WizardDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				5DE54FB72A4364740001E3ED /* WizardsVC.swift */,
 				5DE54FB92A4364810001E3ED /* SpellsVC.swift */,
 				5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */,
+				5DE54FC82A43A0250001E3ED /* WizardDetailsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE54FC72A438A2B0001E3ED /* HouseDetailsVC.swift in Sources */,
+				5DE54FC92A43A0250001E3ED /* WizardDetailsVC.swift in Sources */,
 				5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */,
 				5DE54FBA2A4364810001E3ED /* SpellsVC.swift in Sources */,
 				5DE54FB82A4364740001E3ED /* WizardsVC.swift in Sources */,

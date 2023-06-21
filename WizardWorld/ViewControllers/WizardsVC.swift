@@ -27,6 +27,14 @@ class WizardsVC: UIViewController {
         tableView.reloadData()
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let wizardDetailsVC = segue.destination as? WizardDetailsVC else { return }
+        
+        wizardDetailsVC.wizard = filteredWizards[indexPath.row]
+    }
+    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource

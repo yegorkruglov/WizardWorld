@@ -48,6 +48,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pvb-Y9-yhg" kind="show" id="xW0-jK-WKA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -88,6 +91,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SP-6A-U6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1999.2366412213739" y="-95.070422535211279"/>
+        </scene>
+        <!--Wizard DetailsVC-->
+        <scene sceneID="R5h-rN-REi">
+            <objects>
+                <viewController id="pvb-Y9-yhg" customClass="WizardDetailsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Orm-8Y-ckW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pgz-PS-bmd">
+                                <rect key="frame" x="16" y="96" width="361" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pgz-PS-bmd" secondAttribute="height" multiplier="1:1" id="7ip-tG-GI8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wizard Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz9-54-oa2">
+                                <rect key="frame" x="16" y="465" width="361" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UQk-By-NXg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UQk-By-NXg" firstAttribute="trailing" secondItem="pgz-PS-bmd" secondAttribute="trailing" constant="16" id="O5f-ec-ZI9"/>
+                            <constraint firstItem="bz9-54-oa2" firstAttribute="top" secondItem="pgz-PS-bmd" secondAttribute="bottom" constant="8" symbolic="YES" id="fEN-lZ-ucJ"/>
+                            <constraint firstItem="pgz-PS-bmd" firstAttribute="top" secondItem="UQk-By-NXg" secondAttribute="top" id="gmd-Mg-dTg"/>
+                            <constraint firstItem="pgz-PS-bmd" firstAttribute="leading" secondItem="UQk-By-NXg" secondAttribute="leading" constant="16" id="nMV-ID-Axi"/>
+                            <constraint firstItem="bz9-54-oa2" firstAttribute="leading" secondItem="UQk-By-NXg" secondAttribute="leading" constant="16" id="uYR-UZ-sYi"/>
+                            <constraint firstItem="UQk-By-NXg" firstAttribute="trailing" secondItem="bz9-54-oa2" secondAttribute="trailing" constant="16" id="xLM-H0-EBa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QVV-gU-NbJ"/>
+                    <connections>
+                        <outlet property="wizardImageView" destination="pgz-PS-bmd" id="PAu-yK-luB"/>
+                        <outlet property="wizardInfoLabel" destination="bz9-54-oa2" id="pTi-Gx-Pco"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQS-ld-lwC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792" y="-95"/>
         </scene>
         <!--ElixirsVC-->
         <scene sceneID="3MD-xY-vfn">
