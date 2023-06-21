@@ -18,6 +18,11 @@
 		5DE54FAF2A43563C0001E3ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */; };
 		5DE54FB22A435BE70001E3ED /* Elixir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB12A435BE70001E3ED /* Elixir.swift */; };
 		5DE54FB42A435C9A0001E3ED /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB32A435C9A0001E3ED /* House.swift */; };
+		5DE54FB62A4364650001E3ED /* HousesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB52A4364650001E3ED /* HousesVC.swift */; };
+		5DE54FB82A4364740001E3ED /* WizardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB72A4364740001E3ED /* WizardsVC.swift */; };
+		5DE54FBA2A4364810001E3ED /* SpellsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB92A4364810001E3ED /* SpellsVC.swift */; };
+		5DE54FBC2A4364940001E3ED /* ElixirsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */; };
+		5DE54FBE2A436C800001E3ED /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FBD2A436C800001E3ED /* StartVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = WizardWorld/ViewControllers/MainTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		5DE54FB12A435BE70001E3ED /* Elixir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elixir.swift; sourceTree = "<group>"; };
 		5DE54FB32A435C9A0001E3ED /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		5DE54FB52A4364650001E3ED /* HousesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesVC.swift; sourceTree = "<group>"; };
+		5DE54FB72A4364740001E3ED /* WizardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardsVC.swift; sourceTree = "<group>"; };
+		5DE54FB92A4364810001E3ED /* SpellsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsVC.swift; sourceTree = "<group>"; };
+		5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixirsVC.swift; sourceTree = "<group>"; };
+		5DE54FBD2A436C800001E3ED /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,11 @@
 			isa = PBXGroup;
 			children = (
 				5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */,
+				5DE54FBD2A436C800001E3ED /* StartVC.swift */,
+				5DE54FB52A4364650001E3ED /* HousesVC.swift */,
+				5DE54FB72A4364740001E3ED /* WizardsVC.swift */,
+				5DE54FB92A4364810001E3ED /* SpellsVC.swift */,
+				5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,11 +217,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */,
+				5DE54FBA2A4364810001E3ED /* SpellsVC.swift in Sources */,
+				5DE54FB82A4364740001E3ED /* WizardsVC.swift in Sources */,
+				5DE54FBC2A4364940001E3ED /* ElixirsVC.swift in Sources */,
 				5D9A9F0D2A3C726000788EC0 /* AppDelegate.swift in Sources */,
 				5DE54FB42A435C9A0001E3ED /* House.swift in Sources */,
 				5DE54FAF2A43563C0001E3ED /* MainTabBarController.swift in Sources */,
 				5DE54FB22A435BE70001E3ED /* Elixir.swift in Sources */,
 				5DE54FAD2A4352060001E3ED /* NetworkManager.swift in Sources */,
+				5DE54FBE2A436C800001E3ED /* StartVC.swift in Sources */,
+				5DE54FB62A4364650001E3ED /* HousesVC.swift in Sources */,
 				5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */,
 				5D9A9F0F2A3C726000788EC0 /* SceneDelegate.swift in Sources */,
 			);

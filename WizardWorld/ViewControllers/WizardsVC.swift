@@ -1,5 +1,5 @@
 //
-//  MainTabBarController.swift
+//  WizardsVC.swift
 //  WizardWorld
 //
 //  Created by Egor Kruglov on 21.06.2023.
@@ -7,11 +7,18 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class WizardsVC: UIViewController {
+
+    var wizards: [Wizard]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print(wizards.isEmpty)
         
-        navigationItem.hidesBackButton = true
     }
+    
+
+    
+
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I9S-uh-MAw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9gW-im-8e4">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -12,6 +12,7 @@
         <scene sceneID="UQ0-B5-xYA">
             <objects>
                 <tabBarController id="I9S-uh-MAw" customClass="MainTabBarController" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4gv-f1-pdg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jMq-Dq-VY9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,32 +20,160 @@
                     </tabBar>
                     <connections>
                         <segue destination="lyq-E8-eU2" kind="relationship" relationship="viewControllers" id="rqy-KM-VuX"/>
+                        <segue destination="h3c-ie-3r8" kind="relationship" relationship="viewControllers" id="khx-Fe-tQ4"/>
+                        <segue destination="a9J-1S-Skz" kind="relationship" relationship="viewControllers" id="IA1-XY-GUV"/>
+                        <segue destination="gBA-BO-TaN" kind="relationship" relationship="viewControllers" id="A67-qa-ppG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTQ-Q8-XCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="-95"/>
+            <point key="canvasLocation" x="208.3969465648855" y="-95.070422535211279"/>
         </scene>
-        <!--Item-->
+        <!--WIZARDS-->
+        <scene sceneID="h1U-Zg-YYf">
+            <objects>
+                <viewController id="h3c-ie-3r8" customClass="WizardsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5U-f0-rgm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iJJ-h5-je5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WIZARDS" image="person.fill" catalog="system" id="Jon-D9-ExC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SP-6A-U6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.5190839694656" y="-95.070422535211279"/>
+        </scene>
+        <!--ELIXIRS-->
+        <scene sceneID="3MD-xY-vfn">
+            <objects>
+                <viewController id="a9J-1S-Skz" customClass="ElixirsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fof-Kn-RPP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gML-aI-gyc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ELIXIRS" image="cup.and.saucer.fill" catalog="system" id="jsl-EE-gsq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mm9-h9-LN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="645"/>
+        </scene>
+        <!--SPELLS-->
+        <scene sceneID="RhI-Bp-kBf">
+            <objects>
+                <viewController id="gBA-BO-TaN" customClass="SpellsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccB-AM-qRh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1fQ-f8-KID"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SPELLS" image="wand.and.stars" catalog="system" id="Zrd-Xp-8dN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uez-tF-Lw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="667"/>
+        </scene>
+        <!--HOUSES-->
         <scene sceneID="zFa-BX-XBP">
             <objects>
-                <viewController id="lyq-E8-eU2" sceneMemberID="viewController">
+                <viewController title="HOUSES" id="lyq-E8-eU2" customClass="HousesVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H78-d8-e4D">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-1l-L6s">
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="houseCell" id="0xB-IA-UF7">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xB-IA-UF7" id="Rmr-fS-J2S">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="z3a-WM-y5d"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z3a-WM-y5d" firstAttribute="bottom" secondItem="aNw-1l-L6s" secondAttribute="bottom" id="3hG-n7-YYk"/>
+                            <constraint firstItem="z3a-WM-y5d" firstAttribute="trailing" secondItem="aNw-1l-L6s" secondAttribute="trailing" id="RBb-aM-Xa1"/>
+                            <constraint firstItem="aNw-1l-L6s" firstAttribute="top" secondItem="z3a-WM-y5d" secondAttribute="top" id="ppI-B1-qXm"/>
+                            <constraint firstItem="aNw-1l-L6s" firstAttribute="leading" secondItem="z3a-WM-y5d" secondAttribute="leading" id="vN2-PD-36f"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Sfo-3f-80Q"/>
+                    <tabBarItem key="tabBarItem" title="HOUSES" image="house" catalog="system" id="Sfo-3f-80Q"/>
+                    <connections>
+                        <outlet property="tableView" destination="aNw-1l-L6s" id="EyU-VS-GHZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5y-Db-46U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="-95"/>
+            <point key="canvasLocation" x="1073" y="-789"/>
+        </scene>
+        <!--StartVC-->
+        <scene sceneID="Fm3-3b-uve">
+            <objects>
+                <viewController id="TXK-Et-qdQ" customClass="StartVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKe-I9-9bH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQO-NB-VkH">
+                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="I9S-uh-MAw" kind="show" id="VJj-lz-u2e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bhl-Me-7Fx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mQO-NB-VkH" firstAttribute="centerX" secondItem="UKe-I9-9bH" secondAttribute="centerX" id="hzA-Bg-SJb"/>
+                            <constraint firstItem="mQO-NB-VkH" firstAttribute="centerY" secondItem="UKe-I9-9bH" secondAttribute="centerY" id="ioQ-3g-GaF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pst-wx-Fsh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-Hu-MIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675.57251908396938" y="-95.070422535211279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2iA-j9-xMy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9gW-im-8e4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wvK-8z-OKv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TXK-Et-qdQ" kind="relationship" relationship="rootViewController" id="obB-cG-Y8x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPj-hg-piS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1602.2900763358778" y="-95.070422535211279"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="cup.and.saucer.fill" catalog="system" width="128" height="91"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="wand.and.stars" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
