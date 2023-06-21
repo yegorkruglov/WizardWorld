@@ -20,6 +20,13 @@ final class HousesVC: UIViewController {
         tableView.dataSource = self
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let houseDetailVC = segue.destination as? HouseDetailsVC else { return }
+        
+        houseDetailVC.house = houses[indexPath.row]
+    }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
@@ -32,11 +39,22 @@ extension HousesVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "houseCell", for: indexPath)
         
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = houses[indexPath.row].name
+        let houseName = houses[indexPath.row].name
+        configuration.text = houseName
+        configuration.image = UIImage(named: houseName)
         cell.contentConfiguration = configuration
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        tableView.bounds.height / 4
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
+
+
+

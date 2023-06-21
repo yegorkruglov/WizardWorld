@@ -80,13 +80,13 @@
         <!--HOUSES-->
         <scene sceneID="zFa-BX-XBP">
             <objects>
-                <viewController title="HOUSES" id="lyq-E8-eU2" customClass="HousesVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lyq-E8-eU2" customClass="HousesVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H78-d8-e4D">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-1l-L6s">
-                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="houseCell" id="0xB-IA-UF7">
@@ -96,6 +96,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jju-fO-HSp" kind="show" id="o3p-aY-ojX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -117,6 +120,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5y-Db-46U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1073" y="-789"/>
+        </scene>
+        <!--House DetailsVC-->
+        <scene sceneID="5Wv-QM-xm6">
+            <objects>
+                <viewController id="jju-fO-HSp" customClass="HouseDetailsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wyL-vI-q0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-FT-r7M">
+                                <rect key="frame" x="16" y="103" width="361" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YeH-FT-r7M" secondAttribute="height" multiplier="1:1" id="1cC-cE-x3Q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbR-3K-AI0">
+                                <rect key="frame" x="16" y="472" width="361" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nbR-3K-AI0" secondAttribute="height" multiplier="361:54" id="FAW-Eb-0IM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTp-F7-DVh">
+                                <rect key="frame" x="16" y="534" width="361" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8cH-0I-BkR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uTp-F7-DVh" firstAttribute="top" secondItem="YeH-FT-r7M" secondAttribute="bottom" constant="70" id="2vl-J2-yIp"/>
+                            <constraint firstItem="YeH-FT-r7M" firstAttribute="top" secondItem="8cH-0I-BkR" secondAttribute="top" id="4f8-H1-Rlu"/>
+                            <constraint firstItem="uTp-F7-DVh" firstAttribute="leading" secondItem="8cH-0I-BkR" secondAttribute="leading" constant="16" id="AdM-hy-aqP"/>
+                            <constraint firstItem="nbR-3K-AI0" firstAttribute="leading" secondItem="8cH-0I-BkR" secondAttribute="leading" constant="16" id="GVt-4c-xXF"/>
+                            <constraint firstItem="8cH-0I-BkR" firstAttribute="trailing" secondItem="nbR-3K-AI0" secondAttribute="trailing" constant="16" id="GnZ-ob-Kvd"/>
+                            <constraint firstItem="nbR-3K-AI0" firstAttribute="top" secondItem="YeH-FT-r7M" secondAttribute="bottom" constant="8" symbolic="YES" id="ixB-fI-e0Y"/>
+                            <constraint firstItem="YeH-FT-r7M" firstAttribute="leading" secondItem="8cH-0I-BkR" secondAttribute="leading" constant="16" id="taM-k1-gLL"/>
+                            <constraint firstItem="8cH-0I-BkR" firstAttribute="trailing" secondItem="uTp-F7-DVh" secondAttribute="trailing" constant="16" id="wM4-mz-l5Q"/>
+                            <constraint firstItem="8cH-0I-BkR" firstAttribute="trailing" secondItem="YeH-FT-r7M" secondAttribute="trailing" constant="16" id="xF9-LY-61f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w2M-hs-14O"/>
+                    <connections>
+                        <outlet property="houseImageView" destination="YeH-FT-r7M" id="cVf-8C-4k6"/>
+                        <outlet property="houseInfoLabel" destination="uTp-F7-DVh" id="ysK-bT-wu0"/>
+                        <outlet property="houseNameLabel" destination="nbR-3K-AI0" id="6NM-aH-W5X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p8F-z1-gax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901.5267175572519" y="-789.43661971830988"/>
         </scene>
         <!--StartVC-->
         <scene sceneID="Fm3-3b-uve">
@@ -148,21 +206,24 @@
             </objects>
             <point key="canvasLocation" x="-675.57251908396938" y="-95.070422535211279"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--wefewf-->
         <scene sceneID="2iA-j9-xMy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9gW-im-8e4" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPj-hg-piS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController title="wefewf" automaticallyAdjustsScrollViewInsets="NO" id="9gW-im-8e4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wvK-8z-OKv">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wvK-8z-OKv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vbW-Rj-sEm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="TXK-Et-qdQ" kind="relationship" relationship="rootViewController" id="obB-cG-Y8x"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uPj-hg-piS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1602.2900763358778" y="-95.070422535211279"/>
         </scene>
