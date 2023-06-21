@@ -18,6 +18,8 @@ final class HousesVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        title = "HOUSES"
     }
     
     // MARK: - Navigation

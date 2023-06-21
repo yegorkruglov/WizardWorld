@@ -24,8 +24,10 @@ class StartVC: UIViewController {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         for viewController in viewControllers {
-            if let housesVC = viewController as? HousesVC {
-                housesVC.houses = houses
+            if let navVC = viewController as? UINavigationController {
+                if let housesVC = navVC.topViewController as? HousesVC {
+                    housesVC.houses = houses
+                }
             } else if let wizardsVC = viewController as? WizardsVC {
                 wizardsVC.wizards = wizards
             } else if let spellsVC = viewController as? SpellsVC {

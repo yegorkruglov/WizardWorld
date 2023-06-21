@@ -10,7 +10,6 @@ import UIKit
 class HouseDetailsVC: UIViewController {
     
     @IBOutlet weak var houseImageView: UIImageView!
-    @IBOutlet weak var houseNameLabel: UILabel!
     @IBOutlet weak var houseInfoLabel: UILabel!
     
     var house: House!
@@ -18,8 +17,9 @@ class HouseDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = house.name
+        
         houseImageView.image = UIImage(named: house.name)
-        houseNameLabel.text = house.name.uppercased()
         houseInfoLabel.text = """
                         House founder: \(house.founder)
                         Founder: \(house.founder)
