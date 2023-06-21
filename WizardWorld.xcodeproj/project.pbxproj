@@ -16,6 +16,8 @@
 		5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F292A3C77CE00788EC0 /* Spell.swift */; };
 		5DE54FAD2A4352060001E3ED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FAC2A4352060001E3ED /* NetworkManager.swift */; };
 		5DE54FAF2A43563C0001E3ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */; };
+		5DE54FB22A435BE70001E3ED /* Elixir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB12A435BE70001E3ED /* Elixir.swift */; };
+		5DE54FB42A435C9A0001E3ED /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB32A435C9A0001E3ED /* House.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5D9A9F292A3C77CE00788EC0 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		5DE54FAC2A4352060001E3ED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = WizardWorld/ViewControllers/MainTabBarController.swift; sourceTree = SOURCE_ROOT; };
+		5DE54FB12A435BE70001E3ED /* Elixir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elixir.swift; sourceTree = "<group>"; };
+		5DE54FB32A435C9A0001E3ED /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			children = (
 				5D9A9F252A3C734A00788EC0 /* Wizard.swift */,
 				5D9A9F292A3C77CE00788EC0 /* Spell.swift */,
+				5DE54FB12A435BE70001E3ED /* Elixir.swift */,
+				5DE54FB32A435C9A0001E3ED /* House.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,7 +203,9 @@
 			files = (
 				5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */,
 				5D9A9F0D2A3C726000788EC0 /* AppDelegate.swift in Sources */,
+				5DE54FB42A435C9A0001E3ED /* House.swift in Sources */,
 				5DE54FAF2A43563C0001E3ED /* MainTabBarController.swift in Sources */,
+				5DE54FB22A435BE70001E3ED /* Elixir.swift in Sources */,
 				5DE54FAD2A4352060001E3ED /* NetworkManager.swift in Sources */,
 				5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */,
 				5D9A9F0F2A3C726000788EC0 /* SceneDelegate.swift in Sources */,

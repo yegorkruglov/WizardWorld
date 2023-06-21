@@ -10,7 +10,7 @@ struct Wizard: Decodable {
     let name: String
     let dateOfBirth: String?
     let patronus: String?
-    let hogwartsStudent: Bool?
+    let house: String?
     let actor: String?
     let image: String?
 }

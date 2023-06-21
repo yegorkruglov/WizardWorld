@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Links
+// MARK: - Enums
 enum Link {
     case houses
     case spells
@@ -34,6 +34,7 @@ enum NetworkError: Error {
     case decodingError
 }
 
+// MARK: - NetworkManager
 final class NetworkManager {
     static let shared = NetworkManager()
     
