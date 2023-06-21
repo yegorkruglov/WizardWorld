@@ -6,8 +6,8 @@
 //
 
 struct Wizard: Decodable {
-    let id: String?
-    let name: String?
+    let id: String
+    let name: String
     let dateOfBirth: String?
     let patronus: String?
     let hogwartsStudent: Bool?
