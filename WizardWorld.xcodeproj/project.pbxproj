@@ -137,8 +137,8 @@
 		5DE54FB02A4356520001E3ED /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */,
 				5DE54FBD2A436C800001E3ED /* StartVC.swift */,
+				5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */,
 				5DE54FB52A4364650001E3ED /* HousesVC.swift */,
 				5DE54FC62A438A2B0001E3ED /* HouseDetailsVC.swift */,
 				5DE54FB72A4364740001E3ED /* WizardsVC.swift */,

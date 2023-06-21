@@ -20,9 +20,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="7a9-mC-7Wk" kind="relationship" relationship="viewControllers" id="rqy-KM-VuX"/>
-                        <segue destination="h3c-ie-3r8" kind="relationship" relationship="viewControllers" id="khx-Fe-tQ4"/>
-                        <segue destination="a9J-1S-Skz" kind="relationship" relationship="viewControllers" id="IA1-XY-GUV"/>
-                        <segue destination="gBA-BO-TaN" kind="relationship" relationship="viewControllers" id="A67-qa-ppG"/>
+                        <segue destination="gvk-hO-bKO" kind="relationship" relationship="viewControllers" id="khx-Fe-tQ4"/>
+                        <segue destination="l0b-J4-cMA" kind="relationship" relationship="viewControllers" id="IA1-XY-GUV"/>
+                        <segue destination="ZRg-Rb-TFt" kind="relationship" relationship="viewControllers" id="A67-qa-ppG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTQ-Q8-XCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,16 +36,60 @@
                     <view key="view" contentMode="scaleToFill" id="X5U-f0-rgm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1wg-1s-me4">
+                                <rect key="frame" x="16" y="74" width="361" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wizardCell" id="bAz-hz-tlE">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAz-hz-tlE" id="moz-r4-W4g">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-aw-3ig">
+                                <rect key="frame" x="16" y="44" width="361" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ldc-aw-3ig" secondAttribute="height" multiplier="361:30" id="ZRr-2H-gd9"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Gryffindor"/>
+                                    <segment title="Ravenclaw"/>
+                                    <segment title="Hufflepuff"/>
+                                    <segment title="Slytherin"/>
+                                </segments>
+                                <connections>
+                                    <action selector="houseSelectorTapped" destination="h3c-ie-3r8" eventType="valueChanged" id="1wb-nl-99L"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iJJ-h5-je5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iJJ-h5-je5" firstAttribute="bottom" secondItem="1wg-1s-me4" secondAttribute="bottom" id="FV4-MI-uzg"/>
+                            <constraint firstItem="Ldc-aw-3ig" firstAttribute="leading" secondItem="iJJ-h5-je5" secondAttribute="leading" constant="16" id="IgZ-oB-R3t"/>
+                            <constraint firstItem="Ldc-aw-3ig" firstAttribute="top" secondItem="iJJ-h5-je5" secondAttribute="top" id="X0k-n8-eKD"/>
+                            <constraint firstItem="iJJ-h5-je5" firstAttribute="trailing" secondItem="1wg-1s-me4" secondAttribute="trailing" constant="16" id="mQy-sI-KCw"/>
+                            <constraint firstItem="1wg-1s-me4" firstAttribute="top" secondItem="Ldc-aw-3ig" secondAttribute="bottom" id="nU6-oT-wKX"/>
+                            <constraint firstItem="iJJ-h5-je5" firstAttribute="trailing" secondItem="Ldc-aw-3ig" secondAttribute="trailing" constant="16" id="rdR-yf-06d"/>
+                            <constraint firstItem="1wg-1s-me4" firstAttribute="leading" secondItem="iJJ-h5-je5" secondAttribute="leading" constant="16" id="zpY-N3-iPz"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WIZARDS" image="person.fill" catalog="system" id="Jon-D9-ExC"/>
+                    <navigationItem key="navigationItem" title="WIZARDS" id="P1k-aA-dIE"/>
+                    <connections>
+                        <outlet property="houseSelector" destination="Ldc-aw-3ig" id="Rd1-js-DpW"/>
+                        <outlet property="tableView" destination="1wg-1s-me4" id="RaM-gK-8FF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SP-6A-U6i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.5190839694656" y="-95.070422535211279"/>
+            <point key="canvasLocation" x="1999.2366412213739" y="-95.070422535211279"/>
         </scene>
-        <!--ELIXIRS-->
+        <!--ElixirsVC-->
         <scene sceneID="3MD-xY-vfn">
             <objects>
                 <viewController id="a9J-1S-Skz" customClass="ElixirsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,13 +99,13 @@
                         <viewLayoutGuide key="safeArea" id="gML-aI-gyc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ELIXIRS" image="cup.and.saucer.fill" catalog="system" id="jsl-EE-gsq"/>
+                    <navigationItem key="navigationItem" id="EVM-r7-RwP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mm9-h9-LN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="645"/>
+            <point key="canvasLocation" x="1999" y="644"/>
         </scene>
-        <!--SPELLS-->
+        <!--SpellsVC-->
         <scene sceneID="RhI-Bp-kBf">
             <objects>
                 <viewController id="gBA-BO-TaN" customClass="SpellsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,11 +115,11 @@
                         <viewLayoutGuide key="safeArea" id="1fQ-f8-KID"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SPELLS" image="wand.and.stars" catalog="system" id="Zrd-Xp-8dN"/>
+                    <navigationItem key="navigationItem" id="5oj-lC-3ZM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uez-tF-Lw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208" y="667"/>
+            <point key="canvasLocation" x="1073" y="1392"/>
         </scene>
         <!--HousesVC-->
         <scene sceneID="zFa-BX-XBP">
@@ -211,6 +255,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLd-9W-gMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.5190839694656" y="-789.43661971830988"/>
+        </scene>
+        <!--WIZARDS-->
+        <scene sceneID="jnO-KN-DPX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gvk-hO-bKO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WIZARDS" image="person.fill" catalog="system" id="Jon-D9-ExC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="f8z-wL-QVh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h3c-ie-3r8" kind="relationship" relationship="rootViewController" id="DSZ-8a-i2v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VP4-av-Klb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.5190839694656" y="-95.070422535211279"/>
+        </scene>
+        <!--ELIXIRS-->
+        <scene sceneID="NLH-n2-6ek">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l0b-J4-cMA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ELIXIRS" image="cup.and.saucer.fill" catalog="system" id="jsl-EE-gsq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M3E-Jd-1Q1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a9J-1S-Skz" kind="relationship" relationship="rootViewController" id="wRy-88-Lh6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jr-N5-j9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="644"/>
+        </scene>
+        <!--SPELLS-->
+        <scene sceneID="JV7-xd-4cd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZRg-Rb-TFt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SPELLS" image="wand.and.stars" catalog="system" id="Zrd-Xp-8dN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="26Q-oo-XVI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gBA-BO-TaN" kind="relationship" relationship="rootViewController" id="RYw-j6-NKt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k83-jU-PGC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206.87022900763358" y="666.90140845070425"/>
         </scene>
     </scenes>
     <resources>

@@ -23,17 +23,18 @@ class StartVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
+        
         for viewController in viewControllers {
             if let navVC = viewController as? UINavigationController {
                 if let housesVC = navVC.topViewController as? HousesVC {
                     housesVC.houses = houses
+                } else if let wizardsVC = navVC.topViewController as? WizardsVC {
+                    wizardsVC.wizards = wizards
+                } else if let spellsVC = navVC.topViewController as? SpellsVC {
+                    spellsVC.spells = spells
+                } else if let elixirsVC = navVC.topViewController as? ElixirsVC {
+                    elixirsVC.elixirs = elixirs
                 }
-            } else if let wizardsVC = viewController as? WizardsVC {
-                wizardsVC.wizards = wizards
-            } else if let spellsVC = viewController as? SpellsVC {
-                spellsVC.spells = spells
-            } else if let elixirsVC = viewController as? ElixirsVC {
-                elixirsVC.elixirs = elixirs
             }
         }
     }
