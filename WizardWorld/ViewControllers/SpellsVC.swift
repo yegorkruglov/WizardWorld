@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SpellsVC: UIViewController {
+final class SpellsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ElixirsVC: UIViewController {
+final class ElixirsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var elixirs: [Elixir]!

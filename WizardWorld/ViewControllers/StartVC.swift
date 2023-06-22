@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartVC: UIViewController {
+final class StartVC: UIViewController {
 
     private var wizards: [Wizard]!
     private var spells: [Spell]!

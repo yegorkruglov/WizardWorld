@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WizardDetailsVC: UIViewController {
+final class WizardDetailsVC: UIViewController {
     
     @IBOutlet weak var wizardImageView: UIImageView!
     @IBOutlet weak var wizardInfoLabel: UILabel!

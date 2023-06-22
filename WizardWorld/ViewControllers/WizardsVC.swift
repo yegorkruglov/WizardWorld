@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WizardsVC: UIViewController {
+final class WizardsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var houseSelector: UISegmentedControl!

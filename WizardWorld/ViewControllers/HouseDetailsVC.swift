@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HouseDetailsVC: UIViewController {
+final class HouseDetailsVC: UIViewController {
     
     @IBOutlet weak var houseImageView: UIImageView!
     @IBOutlet weak var houseInfoLabel: UILabel!

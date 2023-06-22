@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ElixirDetailsVC: UIViewController {
+final class ElixirDetailsVC: UIViewController {
     
     @IBOutlet weak var elixirInfoLabel: UILabel!
     
