@@ -22,10 +22,15 @@ class HouseDetailsVC: UIViewController {
         houseImageView.image = UIImage(named: house.name)
         houseInfoLabel.text = """
                         House founder: \(house.founder)
+                        
                         Colors: \(house.houseColours)
+                        
                         Animal: \(house.animal)
+                        
                         Element: \(house.element)
+                        
                         Ghost: \(house.ghost)
+                        
                         Common Room: \(house.commonRoom)
                         """
 

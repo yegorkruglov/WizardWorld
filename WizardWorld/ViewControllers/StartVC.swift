@@ -47,7 +47,7 @@ class StartVC: UIViewController {
                 message: "Please wait a few moments or try again later",
                 preferredStyle: .alert)
             
-            let action = UIAlertAction(title: "OK", style: .cancel)
+            let action = UIAlertAction(title: "EVANESCO!", style: .cancel)
             alertController.addAction(action)
             
             present(alertController, animated: true)            

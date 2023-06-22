@@ -18,13 +18,9 @@ class WizardDetailsVC: UIViewController {
         super.viewDidLoad()
 
         title = wizard.name
+        
         updateWizardImageView()
-        wizardInfoLabel.text = """
-                        House: \(wizard.house ?? "Unknown")
-                        Date of birth: \(wizard.dateOfBirth ?? "Unknown")
-                        Patronus: \(wizard.patronus ?? "Unknown")
-                        Actor: \(wizard.actor ?? "Unknown")
-                        """
+        updateWizardInfoLabel()
     }
     
     private func updateWizardImageView() {
@@ -43,6 +39,40 @@ class WizardDetailsVC: UIViewController {
             }
         }
         
+    }
+    
+    private func updateWizardInfoLabel() {
+        let dateOfBirthLine: String!
+        let patronusLine: String!
+        let actorLine: String
+        
+        if wizard.dateOfBirth == nil || wizard.dateOfBirth == "" {
+            dateOfBirthLine = "Unknown"
+        } else {
+            dateOfBirthLine = wizard.dateOfBirth
+        }
+        
+        if wizard.patronus == nil || wizard.patronus == "" {
+            patronusLine = "Unknown"
+        } else {
+            patronusLine = wizard.patronus ?? "Unknown"
+        }
+        
+        if wizard.actor == nil || wizard.actor == "" {
+            actorLine = "Unknown"
+        } else {
+            actorLine = wizard.actor ?? "Unknown"
+        }
+        
+        wizardInfoLabel.text = """
+                        House: \(wizard.house ?? "Unknown")
+                        
+                        Date of birth: \(dateOfBirthLine ?? "Unknown")
+                        
+                        Patronus: \(patronusLine ?? "Unknown")
+                        
+                        Actor: \(actorLine)
+                        """
     }
     
 

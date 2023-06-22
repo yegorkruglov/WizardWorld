@@ -44,13 +44,13 @@ extension WizardsVC: UITableViewDelegate, UITableViewDataSource {
         
         switch selectedHouse {
         case 0:
-            filteredWizards = wizards.filter { $0.house == "Gryffindor"}
+            filteredWizards = wizards.filter { $0.house == "Gryffindor" }
         case 1:
-            filteredWizards = wizards.filter { $0.house == "Ravenclaw"}
+            filteredWizards = wizards.filter { $0.house == "Ravenclaw" }
         case 2:
-            filteredWizards = wizards.filter { $0.house == "Hufflepuff"}
+            filteredWizards = wizards.filter { $0.house == "Hufflepuff" }
         default:
-            filteredWizards = wizards.filter { $0.house == "Slytherin"}
+            filteredWizards = wizards.filter { $0.house == "Slytherin" }
         }
         
         return filteredWizards.count
