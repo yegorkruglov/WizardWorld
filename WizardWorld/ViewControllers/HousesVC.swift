@@ -9,52 +9,52 @@ import UIKit
 
 final class HousesVC: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var houses: [House]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         title = "HOUSES"
     }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        guard let houseDetailVC = segue.destination as? HouseDetailsVC else { return }
-        
-        houseDetailVC.house = houses[indexPath.row]
-    }
 }
 
-// MARK: - UITableViewDelegate, UITableViewDataSource
-extension HousesVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
+extension HousesVC: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         houses.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "houseCell", for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "houseCell", for: indexPath) as? HouseCell else { return UICollectionViewCell() }
         
-        var configuration = cell.defaultContentConfiguration()
-        let houseName = houses[indexPath.row].name
-        configuration.text = houseName
-        configuration.image = UIImage(named: houseName)
-        cell.contentConfiguration = configuration
+        cell.houseNameLabel.text = houses[indexPath.item].name
+        cell.houseImageView.image = UIImage(named: houses[indexPath.item].name)
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.bounds.height / 4
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let houseDetailsVC = storyboard?.instantiateViewController(withIdentifier: "houseDetailsVC") as? HouseDetailsVC else { return }
+        
+        let selectedHouse = houses[indexPath.item]
+        houseDetailsVC.house = selectedHouse
+
+        navigationController?.pushViewController(houseDetailsVC, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
+extension HousesVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (collectionView.frame.width - 20) / 2
+        let height = width + 50
+        return CGSize(width: width, height: height)
     }
 }
 

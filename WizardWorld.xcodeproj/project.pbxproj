@@ -15,6 +15,7 @@
 		5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F252A3C734A00788EC0 /* Wizard.swift */; };
 		5D9A9F2A2A3C77CE00788EC0 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9A9F292A3C77CE00788EC0 /* Spell.swift */; };
 		5DBE8B632A4440F3004386EA /* ElixirDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE8B622A4440F3004386EA /* ElixirDetailsVC.swift */; };
+		5DBE8B662A4454F8004386EA /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE8B652A4454F8004386EA /* HouseCell.swift */; };
 		5DE54FAD2A4352060001E3ED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FAC2A4352060001E3ED /* NetworkManager.swift */; };
 		5DE54FAF2A43563C0001E3ED /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */; };
 		5DE54FB22A435BE70001E3ED /* Elixir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE54FB12A435BE70001E3ED /* Elixir.swift */; };
@@ -39,6 +40,7 @@
 		5D9A9F252A3C734A00788EC0 /* Wizard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wizard.swift; sourceTree = "<group>"; };
 		5D9A9F292A3C77CE00788EC0 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		5DBE8B622A4440F3004386EA /* ElixirDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixirDetailsVC.swift; sourceTree = "<group>"; };
+		5DBE8B652A4454F8004386EA /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
 		5DE54FAC2A4352060001E3ED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5DE54FAE2A43563C0001E3ED /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = WizardWorld/ViewControllers/MainTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		5DE54FB12A435BE70001E3ED /* Elixir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elixir.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		5D9A9F0B2A3C726000788EC0 /* WizardWorld */ = {
 			isa = PBXGroup;
 			children = (
+				5DBE8B642A4454C3004386EA /* Views */,
 				5DE54FB02A4356520001E3ED /* ViewControllers */,
 				5DE54FAB2A4351C20001E3ED /* Services */,
 				5D9A9F242A3C72F800788EC0 /* Models */,
@@ -128,6 +131,14 @@
 				5DE54FB32A435C9A0001E3ED /* House.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5DBE8B642A4454C3004386EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DBE8B652A4454F8004386EA /* HouseCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5DE54FAB2A4351C20001E3ED /* Services */ = {
@@ -241,6 +252,7 @@
 				5DE54FB62A4364650001E3ED /* HousesVC.swift in Sources */,
 				5D9A9F262A3C734A00788EC0 /* Wizard.swift in Sources */,
 				5D9A9F0F2A3C726000788EC0 /* SceneDelegate.swift in Sources */,
+				5DBE8B662A4454F8004386EA /* HouseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

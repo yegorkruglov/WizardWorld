@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -259,36 +260,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-1l-L6s">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-Uu-ha8">
                                 <rect key="frame" x="0.0" y="44" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="houseCell" id="0xB-IA-UF7">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xB-IA-UF7" id="Rmr-fS-J2S">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TiT-GL-czZ">
+                                    <size key="itemSize" width="204" height="257"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="houseCell" id="WeY-ki-AQ8" customClass="HouseCell" customModule="WizardWorld" customModuleProvider="target">
+                                        <rect key="frame" x="94.666666666666671" y="0.0" width="204" height="257"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UOd-Mv-1EH">
+                                            <rect key="frame" x="0.0" y="0.0" width="204" height="257"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lnW-Du-Coe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="204" height="204"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="lnW-Du-Coe" secondAttribute="height" multiplier="1:1" id="LPe-CV-YSu"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF6-iY-c0b">
+                                                    <rect key="frame" x="20" y="212" width="164" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lnW-Du-Coe" firstAttribute="top" secondItem="UOd-Mv-1EH" secondAttribute="top" id="8iC-dv-KlC"/>
+                                                <constraint firstItem="tF6-iY-c0b" firstAttribute="leading" secondItem="UOd-Mv-1EH" secondAttribute="leading" constant="20" symbolic="YES" id="Mw8-mw-6mM"/>
+                                                <constraint firstItem="tF6-iY-c0b" firstAttribute="top" secondItem="lnW-Du-Coe" secondAttribute="bottom" constant="8" symbolic="YES" id="UVO-QN-PnU"/>
+                                                <constraint firstAttribute="bottom" secondItem="tF6-iY-c0b" secondAttribute="bottom" constant="8" id="dwa-g5-Caq"/>
+                                                <constraint firstItem="lnW-Du-Coe" firstAttribute="centerX" secondItem="UOd-Mv-1EH" secondAttribute="centerX" id="ggM-PD-EbG"/>
+                                                <constraint firstItem="lnW-Du-Coe" firstAttribute="width" secondItem="UOd-Mv-1EH" secondAttribute="width" multiplier="1:1" id="nwh-g4-7m1"/>
+                                                <constraint firstAttribute="trailing" secondItem="tF6-iY-c0b" secondAttribute="trailing" constant="20" symbolic="YES" id="ouu-Jh-v97"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="204" height="257"/>
                                         <connections>
-                                            <segue destination="jju-fO-HSp" kind="show" id="o3p-aY-ojX"/>
+                                            <outlet property="houseImageView" destination="lnW-Du-Coe" id="7P2-0v-EfU"/>
+                                            <outlet property="houseNameLabel" destination="tF6-iY-c0b" id="PE2-Gr-HrP"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z3a-WM-y5d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="z3a-WM-y5d" firstAttribute="bottom" secondItem="aNw-1l-L6s" secondAttribute="bottom" id="3hG-n7-YYk"/>
-                            <constraint firstItem="z3a-WM-y5d" firstAttribute="trailing" secondItem="aNw-1l-L6s" secondAttribute="trailing" id="RBb-aM-Xa1"/>
-                            <constraint firstItem="aNw-1l-L6s" firstAttribute="top" secondItem="z3a-WM-y5d" secondAttribute="top" id="ppI-B1-qXm"/>
-                            <constraint firstItem="aNw-1l-L6s" firstAttribute="leading" secondItem="z3a-WM-y5d" secondAttribute="leading" id="vN2-PD-36f"/>
+                            <constraint firstItem="z3a-WM-y5d" firstAttribute="trailing" secondItem="KWJ-Uu-ha8" secondAttribute="trailing" id="4dC-e9-kuH"/>
+                            <constraint firstItem="z3a-WM-y5d" firstAttribute="bottom" secondItem="KWJ-Uu-ha8" secondAttribute="bottom" id="Qax-nm-ZoQ"/>
+                            <constraint firstItem="KWJ-Uu-ha8" firstAttribute="top" secondItem="z3a-WM-y5d" secondAttribute="top" id="SPE-T0-4M6"/>
+                            <constraint firstItem="KWJ-Uu-ha8" firstAttribute="leading" secondItem="z3a-WM-y5d" secondAttribute="leading" id="jgy-uk-w7s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sDB-Gz-CDD"/>
                     <connections>
-                        <outlet property="tableView" destination="aNw-1l-L6s" id="EyU-VS-GHZ"/>
+                        <outlet property="collectionView" destination="KWJ-Uu-ha8" id="W3X-9q-8cG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5y-Db-46U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,19 +330,19 @@
         <!--House DetailsVC-->
         <scene sceneID="5Wv-QM-xm6">
             <objects>
-                <viewController id="jju-fO-HSp" customClass="HouseDetailsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="houseDetailsVC" id="jju-fO-HSp" customClass="HouseDetailsVC" customModule="WizardWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wyL-vI-q0Z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTp-F7-DVh">
-                                <rect key="frame" x="16" y="400" width="361" height="20.333333333333314"/>
+                                <rect key="frame" x="16" y="363" width="361" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-FT-r7M">
-                                <rect key="frame" x="54.666666666666657" y="96" width="284" height="284"/>
+                                <rect key="frame" x="54.666666666666657" y="59" width="284" height="284"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YeH-FT-r7M" secondAttribute="height" multiplier="1:1" id="X8U-eS-8Tx"/>
                                 </constraints>
