@@ -377,10 +377,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startImage" translatesAutoresizingMaskIntoConstraints="NO" id="zwn-IN-2k2">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQO-NB-VkH">
-                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
+                                <rect key="frame" x="75" y="586" width="242" height="45.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enter Wizard world!">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="moveToHogwartsButtonTapped" destination="TXK-Et-qdQ" eventType="touchUpInside" id="Tmd-3b-VG0"/>
                                 </connections>
@@ -389,8 +395,12 @@
                         <viewLayoutGuide key="safeArea" id="bhl-Me-7Fx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zwn-IN-2k2" firstAttribute="leading" secondItem="bhl-Me-7Fx" secondAttribute="leading" id="LO5-EH-zfB"/>
+                            <constraint firstItem="zwn-IN-2k2" firstAttribute="top" secondItem="UKe-I9-9bH" secondAttribute="top" id="Rfe-YE-6uA"/>
+                            <constraint firstItem="zwn-IN-2k2" firstAttribute="trailing" secondItem="bhl-Me-7Fx" secondAttribute="trailing" id="UeG-fS-2hj"/>
+                            <constraint firstAttribute="bottom" secondItem="zwn-IN-2k2" secondAttribute="bottom" id="c2P-xH-mNM"/>
                             <constraint firstItem="mQO-NB-VkH" firstAttribute="centerX" secondItem="UKe-I9-9bH" secondAttribute="centerX" id="hzA-Bg-SJb"/>
-                            <constraint firstItem="mQO-NB-VkH" firstAttribute="centerY" secondItem="UKe-I9-9bH" secondAttribute="centerY" id="ioQ-3g-GaF"/>
+                            <constraint firstItem="mQO-NB-VkH" firstAttribute="centerY" secondItem="UKe-I9-9bH" secondAttribute="centerY" constant="182.66666666666663" id="ioQ-3g-GaF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pst-wx-Fsh"/>
@@ -406,7 +416,7 @@
         <scene sceneID="HcE-dm-YYE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7a9-mC-7Wk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HOUSES" image="house" catalog="system" id="Sfo-3f-80Q"/>
+                    <tabBarItem key="tabBarItem" title="HOUSES" image="2730126_harry_hogwarts_outline_potter_shield_icon" id="Sfo-3f-80Q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jDj-hC-iBp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
@@ -425,7 +435,7 @@
         <scene sceneID="jnO-KN-DPX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gvk-hO-bKO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="WIZARDS" image="person.fill" catalog="system" id="Jon-D9-ExC"/>
+                    <tabBarItem key="tabBarItem" title="WIZARDS" image="3792024_cap_hat_witch_wizard_icon-2" id="Jon-D9-ExC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="f8z-wL-QVh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
@@ -444,7 +454,7 @@
         <scene sceneID="NLH-n2-6ek">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l0b-J4-cMA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ELIXIRS" image="cup.and.saucer.fill" catalog="system" id="jsl-EE-gsq"/>
+                    <tabBarItem key="tabBarItem" title="ELIXIRS" image="2730130_bottle_harry_magic_outline_potion_icon-2" id="jsl-EE-gsq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="M3E-Jd-1Q1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
@@ -463,7 +473,7 @@
         <scene sceneID="JV7-xd-4cd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZRg-Rb-TFt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SPELLS" image="wand.and.stars" catalog="system" id="Zrd-Xp-8dN"/>
+                    <tabBarItem key="tabBarItem" title="SPELLS" image="2730135_elder_harry_outline_potter_wand_icon-2" id="Zrd-Xp-8dN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="26Q-oo-XVI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
@@ -480,10 +490,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cup.and.saucer.fill" catalog="system" width="128" height="91"/>
-        <image name="house" catalog="system" width="128" height="104"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="wand.and.stars" catalog="system" width="128" height="115"/>
+        <image name="2730126_harry_hogwarts_outline_potter_shield_icon" width="24" height="24"/>
+        <image name="2730130_bottle_harry_magic_outline_potion_icon-2" width="24" height="24"/>
+        <image name="2730135_elder_harry_outline_potter_wand_icon-2" width="24" height="24"/>
+        <image name="3792024_cap_hat_witch_wizard_icon-2" width="24" height="24"/>
+        <image name="startImage" width="3971" height="5957"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

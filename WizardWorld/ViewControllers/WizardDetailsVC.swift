@@ -25,7 +25,7 @@ final class WizardDetailsVC: UIViewController {
     
     private func updateWizardImageView() {
         if wizard.image == nil || wizard.image == "" {
-            wizardImageView.image = UIImage(systemName: "person")
+            wizardImageView.image = UIImage(named: "randomWizard")
         } else {
             let imageURL = wizard.image!
             let networkManager = NetworkManager.shared
