@@ -39,6 +39,23 @@ class StartVC: UIViewController {
         }
     }
     
+    
+    @IBAction func moveToHogwartsButtonTapped() {
+        if wizards == nil || spells == nil ||  elixirs == nil || houses == nil {
+            let alertController = UIAlertController(
+                title: "Network spells are being casted",
+                message: "Please wait a few moments or try again later",
+                preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(action)
+            
+            present(alertController, animated: true)            
+        } else {
+            performSegue(withIdentifier: "moveToTabBar", sender: nil)
+        }
+    }
+    
     private func fetchData() {
         let networkManager = NetworkManager.shared
         

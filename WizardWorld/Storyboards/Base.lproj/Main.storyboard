@@ -265,7 +265,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="I9S-uh-MAw" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="VJj-lz-u2e"/>
+                                    <action selector="moveToHogwartsButtonTapped" destination="TXK-Et-qdQ" eventType="touchUpInside" id="Tmd-3b-VG0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -277,6 +277,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pst-wx-Fsh"/>
+                    <connections>
+                        <segue destination="I9S-uh-MAw" kind="presentation" identifier="moveToTabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4lN-CD-nLR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADl-Hu-MIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

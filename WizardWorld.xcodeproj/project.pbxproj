@@ -144,9 +144,9 @@
 				5DE54FB52A4364650001E3ED /* HousesVC.swift */,
 				5DE54FC62A438A2B0001E3ED /* HouseDetailsVC.swift */,
 				5DE54FB72A4364740001E3ED /* WizardsVC.swift */,
+				5DE54FC82A43A0250001E3ED /* WizardDetailsVC.swift */,
 				5DE54FB92A4364810001E3ED /* SpellsVC.swift */,
 				5DE54FBB2A4364940001E3ED /* ElixirsVC.swift */,
-				5DE54FC82A43A0250001E3ED /* WizardDetailsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
