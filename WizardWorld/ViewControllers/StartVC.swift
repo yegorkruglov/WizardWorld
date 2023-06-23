@@ -8,7 +8,9 @@
 import UIKit
 
 final class StartVC: UIViewController {
-
+    
+    @IBOutlet weak var enterButton: UIButton!
+    
     private var wizards: [Wizard]!
     private var spells: [Spell]!
     private var elixirs: [Elixir]!
@@ -18,6 +20,7 @@ final class StartVC: UIViewController {
         super.viewDidLoad()
         
         fetchData()
+        adjustEnterButton()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,7 +42,6 @@ final class StartVC: UIViewController {
         }
     }
     
-    
     @IBAction func moveToHogwartsButtonTapped() {
         if wizards == nil || spells == nil ||  elixirs == nil || houses == nil {
             let alertController = UIAlertController(
@@ -50,7 +52,7 @@ final class StartVC: UIViewController {
             let action = UIAlertAction(title: "EVANESCO!", style: .cancel)
             alertController.addAction(action)
             
-            present(alertController, animated: true)            
+            present(alertController, animated: true)
         } else {
             performSegue(withIdentifier: "moveToTabBar", sender: nil)
         }
@@ -99,5 +101,13 @@ final class StartVC: UIViewController {
             }
         }
     }
-
+    
+    private func adjustEnterButton() {
+        enterButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        enterButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        enterButton.layer.shadowOpacity = 1.0
+        enterButton.layer.shadowRadius = 10.0
+        enterButton.layer.masksToBounds = false
+    }
+    
 }

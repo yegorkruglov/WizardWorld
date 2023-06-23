@@ -381,12 +381,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQO-NB-VkH">
-                                <rect key="frame" x="75" y="586" width="242" height="45.333333333333314"/>
+                                <rect key="frame" x="75.666666666666686" y="404" width="242" height="45.333333333333314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="13" height="13"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Enter Wizard world!">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="moveToHogwartsButtonTapped" destination="TXK-Et-qdQ" eventType="touchUpInside" id="Tmd-3b-VG0"/>
                                 </connections>
@@ -400,11 +406,12 @@
                             <constraint firstItem="zwn-IN-2k2" firstAttribute="trailing" secondItem="bhl-Me-7Fx" secondAttribute="trailing" id="UeG-fS-2hj"/>
                             <constraint firstAttribute="bottom" secondItem="zwn-IN-2k2" secondAttribute="bottom" id="c2P-xH-mNM"/>
                             <constraint firstItem="mQO-NB-VkH" firstAttribute="centerX" secondItem="UKe-I9-9bH" secondAttribute="centerX" id="hzA-Bg-SJb"/>
-                            <constraint firstItem="mQO-NB-VkH" firstAttribute="centerY" secondItem="UKe-I9-9bH" secondAttribute="centerY" constant="182.66666666666663" id="ioQ-3g-GaF"/>
+                            <constraint firstItem="mQO-NB-VkH" firstAttribute="centerY" secondItem="UKe-I9-9bH" secondAttribute="centerY" constant="0.66666666666668561" id="ioQ-3g-GaF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pst-wx-Fsh"/>
                     <connections>
+                        <outlet property="enterButton" destination="mQO-NB-VkH" id="8cn-Az-Ft7"/>
                         <segue destination="I9S-uh-MAw" kind="presentation" identifier="moveToTabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4lN-CD-nLR"/>
                     </connections>
                 </viewController>
@@ -494,7 +501,7 @@
         <image name="2730130_bottle_harry_magic_outline_potion_icon-2" width="24" height="24"/>
         <image name="2730135_elder_harry_outline_potter_wand_icon-2" width="24" height="24"/>
         <image name="3792024_cap_hat_witch_wizard_icon-2" width="24" height="24"/>
-        <image name="startImage" width="3971" height="5957"/>
+        <image name="startImage" width="720" height="1279"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
