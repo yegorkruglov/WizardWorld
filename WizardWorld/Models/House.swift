@@ -11,17 +11,6 @@ struct House: Decodable {
     let id, name, houseColours, founder: String
     let animal, element, ghost, commonRoom: String
     
-    init(id: String, name: String, houseColours: String, founder: String, animal: String, element: String, ghost: String, commonRoom: String) {
-        self.id = id
-        self.name = name
-        self.houseColours = houseColours
-        self.founder = founder
-        self.animal = animal
-        self.element = element
-        self.ghost = ghost
-        self.commonRoom = commonRoom
-    }
-    
     init(houseData: [String: Any]) {
         id = houseData["id"] as? String ?? ""
         name = houseData["name"] as? String ?? ""

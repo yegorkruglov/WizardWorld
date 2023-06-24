@@ -10,12 +10,6 @@ struct Spell: Decodable {
     let name: String
     let description: String
     
-    init(id: String, name: String, description: String) {
-        self.id = id
-        self.name = name
-        self.description = description
-    }
-    
     init(spellData: [String: Any]) {
         id = spellData["id"] as? String ?? ""
         name = spellData["name"] as? String ?? ""

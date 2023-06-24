@@ -13,22 +13,14 @@ struct Elixir: Decodable {
     let effect, sideEffects, characteristics: String?
     let ingredients: [Ingredient]
     
-    init(id: String, name: String, effect: String?, sideEffects: String?, characteristics: String?, ingredients: [Ingredient]) {
-        self.id = id
-        self.name = name
-        self.effect = effect
-        self.sideEffects = sideEffects
-        self.characteristics = characteristics
-        self.ingredients = ingredients
-    }
-    
     init(elixirData: [String: Any]) {
-        id = elixirData["id"] as? String ?? ""
-        name = elixirData["name"] as? String ?? ""
-        effect = elixirData["effect"] as? String ?? ""
-        sideEffects = elixirData["sideEffects"] as? String ?? ""
-        characteristics = elixirData["characteristics"] as? String ?? ""
-        ingredients = elixirData["ingredients"] as? [Ingredient] ?? []
+        id = elixirData["id"] as? String ?? "Unknown"
+        name = elixirData["name"] as? String ?? "Unknown"
+        effect = elixirData["effect"] as? String ?? "Unknown"
+        sideEffects = elixirData["sideEffects"] as? String ?? "Unknown"
+        characteristics = elixirData["characteristics"] as? String ?? "Unknown"
+        let ingredientsData = elixirData["ingredients"] as? [[String: Any]] ?? [[:]]
+        ingredients = Ingredient.getIngredients(from: ingredientsData)
     }
     
     static func getElixirs(from value: Any) -> [Elixir] {
@@ -45,13 +37,13 @@ struct Ingredient: Decodable {
         self.name = name
     }
     
-    init(ingredientData: [String: Any]) {
-        id = ingredientData["id"] as? String ?? ""
-        name = ingredientData["name"] as? String ?? ""
+    init(ingredientsData: [String: Any]) {
+        id = ingredientsData["id"] as? String ?? ""
+        name = ingredientsData["name"] as? String ?? ""
     }
-    
+
     static func getIngredients(from value: Any) -> [Ingredient] {
-        guard let ingredientData = value as? [[String: Any]] else { return [] }
-        return ingredientData.map { Ingredient(ingredientData: $0) }
+        guard let ingredientsData = value as? [[String: Any]] else { return [] }
+        return ingredientsData.map { Ingredient(ingredientsData: $0) }
     }
 }

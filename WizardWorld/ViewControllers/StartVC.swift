@@ -61,43 +61,43 @@ final class StartVC: UIViewController {
     private func fetchData() {
         let networkManager = NetworkManager.shared
         
-        networkManager.fetch([Wizard].self, from: Link.wizards.url) { [weak self] result in
+        networkManager.fetchWizards(from: Link.wizards.url) { [weak self] result in
             switch result {
             case .success(let wizards):
                 print("wizards downloaded")
                 self?.wizards = wizards
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
         
-        networkManager.fetch([Spell].self, from: Link.spells.url) { [weak self] result in
+        networkManager.fetchSpells(from: Link.spells.url) { [weak self] result in
             switch result {
             case .success(let spells):
                 print("spells downloaded")
                 self?.spells = spells
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
         
-        networkManager.fetch([Elixir].self, from: Link.elixirs.url) { [weak self] result in
+        networkManager.fetchElixirs(from: Link.elixirs.url) { [weak self] result in
             switch result {
             case .success(let elixirs):
                 print("elixirs downloaded")
                 self?.elixirs = elixirs
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
         
-        networkManager.fetch([House].self, from: Link.houses.url) { [weak self] result in
+        networkManager.fetchHouses(from: Link.houses.url) { [weak self] result in
             switch result {
             case .success(let houses):
                 print("houses downloaded")
                 self?.houses = houses
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }

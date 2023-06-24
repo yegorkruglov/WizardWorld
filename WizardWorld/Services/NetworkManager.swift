@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 // MARK: - Enums
 enum Link {
@@ -40,37 +41,73 @@ final class NetworkManager {
     
     private init () {}
     
-    func fetch<T: Decodable>(_ type: T.Type, from url: URL, completion: @escaping(Result<T, NetworkError>) -> Void) {
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                completion(.failure(.noData))
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                let dataModel = try decoder.decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(dataModel))
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseData { dataResponse in
+                switch dataResponse.result {
+                case .success(let imageData):
+                    completion(.success(imageData))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } catch {
-                completion(.failure(.decodingError))
             }
-            
-        }.resume()
     }
     
-    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else {
-                completion(.failure(.noData))
-                return
+    func fetchWizards(from url: URL, completion: @escaping(Result<[Wizard], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let wizards = Wizard.getWizards(from: value)
+                    completion(.success(wizards))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-            DispatchQueue.main.async {
-                completion(.success(imageData))
+    }
+    
+    func fetchSpells(from url: URL, completion: @escaping(Result<[Spell], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let spells = Spell.getSpells(from: value)
+                    completion(.success(spells))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-        }
+    }
+    
+    func fetchElixirs(from url: URL, completion: @escaping(Result<[Elixir], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let elixirs = Elixir.getElixirs(from: value)
+                    completion(.success(elixirs))
+                    
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
+    
+    func fetchHouses(from url: URL, completion: @escaping(Result<[House], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let houses = House.getHouses(from: value)
+                    completion(.success(houses))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
     }
 }
