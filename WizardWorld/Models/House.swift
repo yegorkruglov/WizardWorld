@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct House: Decodable {
+struct House {
     let id, name, houseColours, founder: String
     let animal, element, ghost, commonRoom: String
     

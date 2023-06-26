@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Elixir: Decodable {
+struct Elixir {
     let id: String
     let name: String
     let effect, sideEffects, characteristics: String?
@@ -29,13 +29,8 @@ struct Elixir: Decodable {
     }
 }
 
-struct Ingredient: Decodable {
+struct Ingredient {
     let id, name: String
-    
-    init(id: String, name: String) {
-        self.id = id
-        self.name = name
-    }
     
     init(ingredientsData: [String: Any]) {
         id = ingredientsData["id"] as? String ?? ""

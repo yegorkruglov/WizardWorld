@@ -5,7 +5,7 @@
 //  Created by Egor Kruglov on 16.06.2023.
 //
 
-struct Wizard: Decodable {
+struct Wizard {
     let id: String
     let name: String
     let dateOfBirth: String?
